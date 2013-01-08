@@ -1,4 +1,4 @@
-git+git://github.com/wyn/heroku-buildpack-python.git
+virtualenv=1.6.4
 Django==1.4.3
 numpy==1.6.2
 matplotlib==1.2.0
