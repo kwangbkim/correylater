@@ -1,7 +1,7 @@
--e .
 Django==1.4.3
 numpy==1.6.2
 matplotlib==1.2.0
 scipy==0.11.0
 psycopg2==2.4.6
 wsgiref==0.1.2
+-e .
