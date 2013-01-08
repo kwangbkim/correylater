@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="screen" />
+<div id="header">
+	<h1><a href="/correlations/">Correy</a></h1>
+	<h2>Quick and simple data analysis.</h2>
+	
+</div>
+
+<div id="wrap">
+	
+	<div id="inputform">
+		<form action="" method="POST">
+			{% csrf_token %}
+			<h3>Run a test for correlation</h3>
+			
+			<fieldset>
+				<li>
+					{{ input_form.title.errors }}
+					<label for="title">Title</label>
+					{{ input_form.title }}
+				</li>
+			</fieldset>
+
+			<fieldset>
+				<legend>X-Axis Information</legend> 
+				<li>
+					{{ input_form.xlabel.errors }}
+					<label for="xlabel">Label</label>
+					{{ input_form.xlabel }}
+				</li>
+	
+				<li>
+					{{ input_form.xdata.errors }}
+					<label for="xdata">Data</label>
+					{{ input_form.xdata }}
+				</li>
+			</fieldset>
+	
+			<fieldset>
+				<legend>Y-Axis Information</legend>
+				<li>
+					{{ input_form.ylabel.errors }}
+					<label for="ydata">Label</label>
+					{{ input_form.ylabel }}
+				</li>
+	
+				<li>
+					{{ input_form.ydata.errors }}
+					<label for="ydata">Data</label>
+					{{ input_form.ydata }}
+				</li>
+			</fieldset>
+	
+			<button type="submit">Execute</button>
+		</form>	
+	</div>
+
+	<div id="directions">
+		<h3>Directions</h3>
+		<ol>
+			<li>
+				The title will show at the top of a generated scatter plot of your data
+			</li>
+			<li>
+				Data should be comma delimited, i.e. <strong>1.1, 2.2, 3.3 ...</strong> 
+			</li>
+			<li>
+				Data should be numbers only
+			</li>
+			<li>
+				Each data set has a limit of <strong>5000 characters</strong> 
+			</li>
+		</ol>
+	</div>
+
+	<div id="recent">
+		<h3>Last Correlation Test</h3>
+		{% if latest_correlation_list %}
+	    	<ul>
+				{% for correlation in latest_correlation_list %}
+				<li><a href="/correlations/{{ correlation.id }}/">{{ correlation.title }}</a></li>
+				{% endfor %}
+			</ul>
+		{% else %}
+	    	<p>No correlations are available.</p>
+		{% endif %}
+	</div>
+	
+	<div id="feedback">
+		<h3>Feedback</h3>
+		<p>Questions, complaints, suggestions?  Shoot me a <a href="mailto:me@kwangbkim.com">note</a>.</p>
+	</div>
+</div>
+

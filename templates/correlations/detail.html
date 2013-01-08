@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="screen" />
+<div id="header">
+	<h1><a href="/correlations/">Correy</a></h1>
+	<h2>Quick and simple data analysis.</h2>
+</div>
+
+<div id="wrap">
+	<div id="inputform">
+		<fieldset>
+			<li>
+				<label>Date Created</label>
+				<input type="text" value="{{correlation.pub_date}}" readonly />
+			</li>
+			<li>
+				<label>Correlation Coefficient *</label>
+				<input type="text" value="{{correlation.coefficient}}" readonly />
+			</li>
+			<li>
+				<label>{{correlation.xlabel}}</label>
+				<textarea readonly>{{correlation.xdata}}</textarea>
+			</li>
+			<li>
+				<label>{{correlation.ylabel}}</label>
+				<textarea readonly>{{correlation.ydata}}</textarea>
+			</li>
+				<p>* Correlation coefficient is a value between -1 and 1.  1 is perfect correlation, -1 for perfect negative correlation.  0 is no correlation whatsoever.</p>
+		</fieldset>
+	</div>
+	
+	<img src="/correlations/{{ correlation.id }}/simple_plot" class="center"/>
+</div>
+
