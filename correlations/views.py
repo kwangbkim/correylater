@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from correlations.models import Correlation, CorrelationForm
+from .models import Correlation, CorrelationForm
     
 def index(request):
     latest_correlation_list = Correlation.objects.order_by('-pub_date')[:1]
