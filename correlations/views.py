@@ -31,8 +31,8 @@ def detail(request, correlation_id):
     correlation = Correlation.objects.get(pk=correlation_id)
     context = {'correlation': correlation}
     return render(request, 'correlations/detail.html', context)
-    # return HttpResponse("Correlation details for # %s" % correlation_id)    
     
+# Plots are generated from the view to save space from storing images in a database.
 def simple_plot(request, correlation_id):
     import django
     from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
