@@ -13,7 +13,7 @@ import re
 class Correlation(models.Model):
     title = models.CharField(max_length=200)
     pub_date = models.DateTimeField(default=datetime.now, blank=True)
-    coefficient = models.DecimalField(default=0, max_digits=10, decimal_places=2)
+    coefficient = models.FloatField(default=0)
 
     xdata = models.CharField(max_length=5000)
     xlabel = models.CharField(max_length=200)

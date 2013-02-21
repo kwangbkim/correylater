@@ -1,0 +1,137 @@
+body {
+	background: #73C1F2;
+}
+
+img.center {
+	display:block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+button {
+	background: Black;
+	border: none;
+	border-radius: 20px;
+	color: #ffffff;
+	display: block;
+	font: 18px Georgia, "sans-serif";
+	float: right;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	padding: 7px 25px;
+	
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+}
+
+button:hover {
+	background: #D5700B;
+	cursor: pointer;
+}
+
+#header h1 a {
+	color: white;
+	font-family: baskerville;
+	font-size: 50px;
+	text-decoration: none;
+}
+
+#header h2 {
+	color: black;
+	font-family: baskerville;
+	font-size: 16px;
+	font-weight: lighter;
+	border-bottom: solid 1px white;;
+}
+
+#wrap {
+	float: left;
+	width: 100%;
+}
+
+#wrap h3{
+	margin: 5px 5px 5px 10px;
+}
+
+#inputform {
+	background: #94D0F5;
+	width: 40%;
+	border-radius: 5px;	
+	float: left;
+}
+
+#inputform fieldset {
+	border: none;;;
+}
+
+#inputform fieldset legend {
+	color: black;
+	font-family: baskerville;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#inputform fieldset li {
+	background: rgba(255,255,255,.3);
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+
+#inputform label {
+	float: left;
+	font-size: 19px;
+	width: 100%;
+}
+
+#inputform fieldset li textarea {
+	height: 75px;
+}
+
+#inputform fieldset li textarea, input {
+	width: 99%;
+	max-width:99%;
+}
+
+#directions {
+	background: #94D0F5;
+	border-radius: 5px;
+	font-family: baskerville;
+	font-size: 20px;
+	float: right;
+	margin-right: 10px;
+	width: 57%;
+}
+
+#recent {
+	background: #94D0F5;
+	border-radius: 5px;
+	float:right;
+	font-family: baskerville;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 57%;
+}
+
+#recent ul li {
+	font-size: 20px;
+}
+
+#feedback {
+	background: #94D0F5;
+	border-radius: 5px;
+	float:right;
+	width: 57%;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#feedback p {
+	margin-left: 10px;
+}

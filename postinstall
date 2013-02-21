@@ -1,0 +1,5 @@
+#!/bin/sh
+python createdb.py
+python manage.py syncdb --noinput
+python mkadmin.py
+python manage.py collectstatic --noinput
