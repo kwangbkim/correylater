@@ -4,7 +4,7 @@ settings_dir = os.path.dirname(__file__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))
 
 # Django settings for correy project.
-LOCAL = False
+LOCAL = True
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 

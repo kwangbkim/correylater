@@ -81,6 +81,8 @@ class CommaDelimitedParser:
 
     @staticmethod
     def numbers_to_list(value):
+        value = value.strip()
+        value = value.replace('\r\n',' ')
         s = StringIO.StringIO(value)
         reader = csv.reader(s, delimiter=',')
         l = list(map(float, row) for row in reader)
